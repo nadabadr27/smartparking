@@ -37,35 +37,38 @@ class hi extends StatelessWidget {
               ),
               text(text: 'affordable price',weight: FontWeight.w600,color:Colors.black26,size: 20),
               SizedBox(
-                height: 100,
+                height: 70,
               ),
 
               Padding(
                 padding: const EdgeInsets.only(top: 80),
-                child: Row(
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Row(
 
-                  children: [
+                    children: [
            textBottom(text: 'Back',  function:(){
              Navigator.push(context,MaterialPageRoute(builder: (context)=>welcome(
              ),) ,);
            }),
-                    SizedBox(
-                      width: 80,
-                    ),
-                    dot(color: blue),
-                    dot(color: blue),
-                    dot(color: Colors.black12),
-                    dot(color: blue),
+                      SizedBox(
+                        width: 80,
+                      ),
+                      dot(color: blue),
+                      dot(color: blue),
+                      dot(color: Colors.black12),
+                      dot(color: blue),
 
 
-                    SizedBox(
-                      width: 80,
-                    ),
-                    matrialbuttom(text: 'Next', width: 85, color: blue, size: 20,colortext: Colors.white, wight: FontWeight.w900,function: (){
-                      Navigator.push(context,MaterialPageRoute(builder: (context)=>hello(
-                      ),) ,);})
+                      SizedBox(
+                        width: 80,
+                      ),
+                      matrialbuttom(text: 'Next', width: 85, color: blue, size: 20,colortext: Colors.white, wight: FontWeight.w900,function: (){
+                        Navigator.push(context,MaterialPageRoute(builder: (context)=>hello(
+                        ),) ,);})
 
-                  ],
+                    ],
+                  ),
                 ),
               )
             ],
