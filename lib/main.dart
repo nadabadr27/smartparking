@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smartparking/modules/welcomepage/logo/logo.dart';
+import 'package:smartparking/modules/welcomepage/sign%20in/signin.dart';
 import 'package:smartparking/modules/welcomepage/welcome/welcome.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         //   ),
       ),
       //themeMode: ThemeMode.dark,
-      home:logo(),
+      home:signin(),
     );
   }
 }
