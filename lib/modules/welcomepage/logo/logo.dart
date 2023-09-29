@@ -14,62 +14,32 @@ class _logoState extends State<logo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-body: SingleChildScrollView(
-  scrollDirection: Axis.vertical,
-  child:   Padding(
+body: Padding(
+  padding: EdgeInsets.only(top:90),
+  child:   Column(
+   mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      Image.asset('assets/images/City driver-pana.png',width: double.infinity,height: 370,),
+      text(text:'Parking Spot',color: blue,weight: FontWeight.w900,size: 40),
 
-    padding: EdgeInsets.only(top:90),
+      Expanded(
+          child: Padding(
+            padding:EdgeInsets.only(top:80,left: 250),
+            child: Column(
+              crossAxisAlignment:CrossAxisAlignment.end,
+              children: [
 
-    child:   Column(
-
-     mainAxisAlignment: MainAxisAlignment.center,
-
-      children: [
-
-        Image.asset('assets/images/City driver-pana.png',width: double.infinity,height: 370,),
-
-        text(text:'Parking Spot',color: blue,weight: FontWeight.w900,size: 40),
-
-
-
-        Expanded(
-
-            child: Padding(
-
-              padding:EdgeInsets.only(top:80,left: 250),
-
-              child: Column(
-
-                crossAxisAlignment:CrossAxisAlignment.end,
-
-                children: [
+              matrialbuttom(text: 'Hello', width: 80, color: blue, size: 20,colortext: Colors.white, wight: FontWeight.bold,function: (){
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>welcome(
+                ),) ,);
+              })
 
 
-
-                matrialbuttom(text: 'Hello', width: 80, color: blue, size: 20,colortext: Colors.white, wight: FontWeight.bold,function: (){
-
-                  Navigator.push(context,MaterialPageRoute(builder: (context)=>welcome(
-
-                  ),) ,);
-
-                })
-
-
-
-
-
-                ],
-
-              ),
-
-            )
-
-        )
-
-      ],
-
-    ),
-
+              ],
+            ),
+          )
+      )
+    ],
   ),
 ),
     );
