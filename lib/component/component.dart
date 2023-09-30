@@ -30,10 +30,79 @@ Widget matrialbuttom({
   width,required double size,@required color,@required colortext,@required wight,function
 })=>Container(
   width:width,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(8),
   color: color,
-
+    ),
   child:  MaterialButton(onPressed: function
 
   ,child:Text(text,style: TextStyle(fontWeight: wight,color:colortext,fontSize: size),)),
 );
+Widget formfield({
+  @required type,
+  @required controller,
+  @required label,
+  prefix,
+  validate,
+  ontap,
+  suffix,
+obscure,
+function,
+ispassword=false,
+  isClickable = true,
+})=>Container(
+  height: 55,
+decoration: BoxDecoration(
+borderRadius: BorderRadius.circular(8),
+color: gray,
+),
+   child: TextFormField(
+keyboardType:type,
+enabled: isClickable,
+onTap:ontap,
+validator: validate,
+decoration: InputDecoration(
+labelText: label,
+border: OutlineInputBorder(),
+prefixIcon:Icon(prefix),
+suffixIcon: IconButton(onPressed: function,
+icon: Icon(suffix),
+)
+    ),
+     obscureText: ispassword,
+),);
+Widget buttom({
+  @required title,
+  @required icon,
+  color,
+  function,
+})=>Container(
+height: 55,
+decoration: BoxDecoration(
+borderRadius: BorderRadius.circular(8),
+color: gray,
+),
+
+child: MaterialButton(onPressed: function,
+child: Row(
+mainAxisAlignment: MainAxisAlignment.center,
+children: [
+Icon(icon,color:color,size: 40,),
+SizedBox(
+  width: 4,
+),
+Text(title,style: TextStyle(fontSize:25,
+  color: darkblue,
+  fontWeight: FontWeight.bold,
+
+),)
+],
+),
+),
+);
+
+
+
+
+
 
