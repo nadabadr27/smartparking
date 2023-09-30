@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smartparking/component/component.dart';
 import 'package:smartparking/constant/constant.dart';
+import 'package:smartparking/modules/create%20account/linked%20login/linked.dart';
 import 'package:smartparking/modules/welcomepage/logo/logo.dart';
 import 'package:smartparking/modules/welcomepage/welcome/welcome.dart';
 import 'package:smartparking/modules/welcomepage/welfind/hi.dart';
@@ -66,7 +67,7 @@ class hello extends StatelessWidget {
                             ),
                             Expanded(
                               child: matrialbuttom(text: 'GetStart', width: 120, color: blue, size: 20,colortext: Colors.white, wight: FontWeight.w900,function: (){
-                                Navigator.push(context,MaterialPageRoute(builder: (context)=>hello(
+                                Navigator.push(context,MaterialPageRoute(builder: (context)=>linked(
                                 ),) ,);}),
                             )
 
