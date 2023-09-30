@@ -80,7 +80,7 @@ Widget buttom({
 height: 55,
 decoration: BoxDecoration(
 borderRadius: BorderRadius.circular(8),
-color: gray,
+color: grey,
 ),
 
 child: MaterialButton(onPressed: function,
