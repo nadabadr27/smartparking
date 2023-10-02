@@ -1,8 +1,9 @@
-import 'package:smartparking/constant/constant.dart';
-import 'package:smartparking/component/component.dart';
+import 'package:smartpark/constant/constant.dart';
+import 'package:smartpark/component/component.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:smartparking/modules/welcomepage/welfind/hi.dart';
+import 'package:smartpark/modules/create%20account/continue%20register/continue.dart';
+import 'package:smartpark/modules/welcomepage/welfind/hi.dart';
 class register extends StatefulWidget {
   @override
   _registerState createState() => _registerState();
@@ -17,11 +18,12 @@ class _registerState extends State<register> {
   var nummbercar=TextEditingController();
   var fullname=TextEditingController();
   var phone=TextEditingController();
-  var date=TextEditingController();
+  var age=TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         key: scaffoldKey,
+        appBar: AppBar(leading:IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back,color: Colors.black26,),),),
         body:  Form(
           key: formKey,
           child: SingleChildScrollView (
@@ -42,33 +44,22 @@ class _registerState extends State<register> {
                         if (value!.isEmpty) {
                           return 'full name must not be empty';
                         }
-
                         return null;
                       },
                     ),
                     SizedBox(
                       height: 10,
                     ),
-                    formfield(type: TextInputType.datetime, controller:date, label: 'Date of birth ',
-                      prefix: Icons.date_range,
+                    formfield(type: TextInputType.number,
+                      controller:age, label: 'Age ',
+                      prefix: Icons.data_usage_outlined,
                       validate:  (value){
                         if (value!.isEmpty) {
-                          return 'date of birth must not be empty';
+                          return 'age must not be empty';
                         }
-
                         return null;
                       },
-                      ontap: () {
-                        showDatePicker(
-                          context: context,
-                          initialDate: DateTime.now(),
-                          firstDate: DateTime.parse('1900-12-31'),
-                          lastDate: DateTime.parse('2025-12-31'),
-                        ).then((value) {
-                          date.text =
-                              DateFormat.yMMMd().format(value!);
-                        });
-                      },
+
 
                     ),
                     SizedBox(
@@ -141,7 +132,7 @@ class _registerState extends State<register> {
 
                                     if( formKey.currentState!.validate()){
 
-                                      Navigator.push(context,MaterialPageRoute(builder: (context)=>hi(
+                                      Navigator.push(context,MaterialPageRoute(builder: (context)=>signin(
                                       ),) ,);
                                     }
                                     return null;
@@ -149,8 +140,6 @@ class _registerState extends State<register> {
                             ],
                           ),
                         )),
-
-
                   ]
               ),
             ),
@@ -159,7 +148,3 @@ class _registerState extends State<register> {
     );
   }
 }
-
-
-
-
