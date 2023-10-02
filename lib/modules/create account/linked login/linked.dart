@@ -1,11 +1,11 @@
 import 'package:intl/intl.dart';
-import 'package:smartparking/constant/constant.dart';
-import 'package:smartparking/component/component.dart';
+import 'package:smartpark/constant/constant.dart';
+import 'package:smartpark/component/component.dart';
 import 'package:flutter/material.dart';
-import 'package:smartparking/modules/create%20account/continue%20register/continue.dart';
-import 'package:smartparking/modules/create%20account/register/register.dart';
+import 'package:smartpark/modules/create%20account/continue%20register/continue.dart';
+import 'package:smartpark/modules/create%20account/register/register.dart';
 //import 'package:smartparking/modules/createaccount/register/register.dart';
-import 'package:smartparking/modules/welcomepage/welfind/hi.dart';
+import 'package:smartpark/modules/welcomepage/welfind/hi.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class linked extends StatefulWidget {
   @override
@@ -16,10 +16,11 @@ class _linkedState extends State<linked> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(leading:IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back,color: Colors.black26,),),),
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Padding(
-          padding: const EdgeInsets.only(top:100,right: 20,left: 20),
+          padding: const EdgeInsets.only(top:50,right: 20,left: 20),
           child: Column(
             children: [
 
@@ -27,7 +28,7 @@ class _linkedState extends State<linked> {
               SizedBox(
                 height: 30,
               ),
-              buttom(title: "Facebook", icon: Icons.facebook,color: Colors.blue
+              buttom(title: "Facebook", icon: Icons.facebook,color: Colors.blue,
               ),
               SizedBox(
                 height: 10,
@@ -40,7 +41,7 @@ class _linkedState extends State<linked> {
               buttom(title: "Apple", icon: FontAwesomeIcons.apple,color: Colors.black
               ),
               SizedBox(
-                height: 70,
+                height: 60,
               ),
               Row(
                 children: [
@@ -60,7 +61,7 @@ class _linkedState extends State<linked> {
                 ],
               ),
               SizedBox(
-                height: 70,
+                height: 60,
               ),
 
               matrialbuttom(text: 'Sign in', width: double.infinity, size: 20, color: blue, colortext: Colors.white, wight: FontWeight.w600),
