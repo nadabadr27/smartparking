@@ -1,14 +1,22 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:smartparking/component/component.dart';
-import 'package:smartparking/constant/constant.dart';
-import 'package:smartparking/modules/welcomepage/logo/logo.dart';
-import 'package:smartparking/modules/welcomepage/welcome/welcome.dart';
-import 'package:smartparking/modules/welcomepage//welcomelogo/welcomlogo.dart';
+import 'package:smartpark/component/component.dart';
+import 'package:smartpark/constant/constant.dart';
+import 'package:smartpark/modules/create%20account/linked%20login/linked.dart';
+import 'package:smartpark/modules/welcomepage/logo/logo.dart';
+import 'package:smartpark/modules/welcomepage/welcome/welcome.dart';
+import 'package:smartpark/modules/welcomepage//welcomelogo/welcomlogo.dart';
 class hi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar:  AppBar(
+        actions: [
+          textBottom(text: 'Skip',function: (){
+            Navigator.push(context,MaterialPageRoute(builder: (context)=>linked(
+            ),) ,);})
+        ],
+      ),
       body:SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Padding(
