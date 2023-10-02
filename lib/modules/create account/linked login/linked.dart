@@ -1,6 +1,3 @@
-import 'package:intl/intl.dart';
-import 'package:smartpark/constant/constant.dart';
-import 'package:smartpark/component/component.dart';
 import 'package:flutter/material.dart';
 import 'package:smartpark/modules/create%20account/continue%20register/continue.dart';
 import 'package:smartpark/modules/create%20account/register/register.dart';
@@ -64,7 +61,7 @@ class _linkedState extends State<linked> {
                 height: 60,
               ),
 
-              matrialbuttom(text: 'Sign in', width: double.infinity, size: 20, color: blue, colortext: Colors.white, wight: FontWeight.w600),
+              matrialbuttom(text: 'Login', width: double.infinity, size: 20, color: blue, colortext: Colors.white, wight: FontWeight.w600),
               SizedBox(
                 height: 80,
               ),
