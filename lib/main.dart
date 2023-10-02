@@ -1,9 +1,7 @@
-import 'package:flutter/material.dart';
-
-import 'package:smartparking/modules/create%20account/linked%20login/linked.dart';
-import 'package:smartparking/modules/welcomepage/logo/logo.dart';
+import 'package:smartpark/modules/create%20account/linked%20login/linked.dart';
+import 'package:smartpark/modules/welcomepage/logo/logo.dart';
 //import 'package:smartparking/modules/welcomepage/sign%20in/signin.dart';
-import 'package:smartparking/modules/welcomepage/welcome/welcome.dart';
+import 'package:smartpark/modules/welcomepage/welcome/welcome.dart';
 
 import 'modules/create account/register/register.dart';
 
@@ -20,12 +18,22 @@ class MyApp extends StatelessWidget {
         // primarySwatch: Colors.greenAccent,
         scaffoldBackgroundColor: Colors.white,
         appBarTheme: AppBarTheme(backgroundColor: Colors.white,
+          elevation: 0.0,
+        //  iconTheme: IconThemeData(color: Colors.black),
+          backwardsCompatibility: false,
+          titleTextStyle: TextStyle(color: darkblue,
+              fontWeight: FontWeight.w900,
+              fontSize: 20.0),
+          systemOverlayStyle: SystemUiOverlayStyle(
+              statusBarColor:Colors.white,
+              statusBarIconBrightness: Brightness.dark
 
-        //   ),
-      ),
+          ),
+        ),
+
       ),
       //themeMode: ThemeMode.dark,
-      home:linked(),
+      home:welcome(),
     );
   }
 }
