@@ -1,12 +1,11 @@
-import 'package:smartparking/constant/constant.dart';
-import 'package:smartparking/component/component.dart';
+import 'package:smartpark/constant/constant.dart';
+import 'package:smartpark/component/component.dart';
 import 'package:flutter/material.dart';
-import 'package:smartparking/modules/welcomepage/welfind/hi.dart';
+import 'package:smartpark/modules/welcomepage/welfind/hi.dart';
 class signin extends StatefulWidget {
   @override
   _signinState createState() => _signinState();
 }
-
 class _signinState extends State<signin> {
   bool isconfirm=true;
   bool ispassword=true;
@@ -20,6 +19,7 @@ class _signinState extends State<signin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: AppBar(leading:IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back,color: Colors.black26,),),),
         key: scaffoldKey,
         body:  Form(
           key: formKey,
@@ -30,10 +30,6 @@ class _signinState extends State<signin> {
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    IconButton(onPressed: (){}, icon:Icon(Icons.arrow_back)),
-                    SizedBox(
-                      height: 10,
-                    ),
                     text(text: ' Continue create ', color: darkblue, weight: FontWeight.w800, size:35),
                     text(text: 'account', color: blue, weight: FontWeight.w800, size: 35),
                     SizedBox(
@@ -73,8 +69,6 @@ class _signinState extends State<signin> {
 
                           return null;
                         },
-
-
                     ),
                     SizedBox(
                       height: 10,
