@@ -27,8 +27,8 @@ class _linkedState extends State<linked> {
               SizedBox(
                 height: 30,
               ),
-            buttom(title: "Facebook", icon: Icons.facebook,color: Colors.blue
-               ),
+              buttom(title: "Facebook", icon: Icons.facebook,color: Colors.blue
+              ),
               SizedBox(
                 height: 10,
               ),
@@ -40,43 +40,49 @@ class _linkedState extends State<linked> {
               buttom(title: "Apple", icon: FontAwesomeIcons.apple,color: Colors.black
               ),
               SizedBox(
-                height: 50,
+                height: 70,
               ),
-              CircleAvatar(
-                radius: 15,
-                child: Text('OR',style: TextStyle(color: darkblue),),
-                backgroundColor: gray,
+              Row(
+                children: [
+                  Expanded(child: Divider(
+                    thickness: .5,
+                    color:Colors.grey,
+                  )),
+                  CircleAvatar(
+                    radius: 20,
+                    child:text(text: 'OR',weight: FontWeight.w600,size: 20,color: darkblue),
+                    backgroundColor: gray,
+                  ),
+                  Expanded(child: Divider(
+                    thickness: .5,
+                    color:Colors.grey,
+                  )),
+                ],
               ),
               SizedBox(
-                height: 60,
+                height: 70,
               ),
 
               matrialbuttom(text: 'Sign in', width: double.infinity, size: 20, color: blue, colortext: Colors.white, wight: FontWeight.w600),
               SizedBox(
-                height: 60,
+                height: 80,
               ),
               Align(
-                alignment: Alignment.bottomCenter,
+                alignment: Alignment.bottomLeft,
                 child: Row(
                   children: [
-                    text(text: "Don't have account", color: Colors.black12, weight: FontWeight.w600, size: 20),
-                   SizedBox(
-                     width: 5,
-                   ),
-                   textBottom(text: 'Sign up',function: (){
-    Navigator.push(context,MaterialPageRoute(builder: (context)=>register(
-    ),) ,);
-    }
-
-
-                   )
+                    text(text: "Don't have account", color: Colors.black12, weight: FontWeight.w600, size: 20,),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    textBottom(text: 'Sign up',function: (){
+                      Navigator.push(context,MaterialPageRoute(builder: (context)=>register(
+                      ),) ,);
+                    }
+                    )
                   ],
                 ),
               ),
-
-
-
-
             ],
           ),
         ),
